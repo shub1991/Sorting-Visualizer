@@ -22,5 +22,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    "linebreak-style": ["error", "windows"],
+    "react/forbid-prop-types":[]
   },
 };
