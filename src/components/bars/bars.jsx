@@ -1,7 +1,5 @@
-/* eslint-disable*/
 import React from 'react';
-import PropTypes from 'prop-types';
-import Bar from '../bar/bar';
+import Bar from './bar/bar';
 
 const bars = ({ barArray = [],activeIndex,sortedIndex }) => {
   console.log(sortedIndex);
@@ -15,9 +13,5 @@ const bars = ({ barArray = [],activeIndex,sortedIndex }) => {
   );
 };
 
-bars.propTypes = {
-  barArray:PropTypes.array,
-  activeIndex:PropTypes.number
-};
 
 export default bars;
