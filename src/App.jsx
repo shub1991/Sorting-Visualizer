@@ -5,7 +5,8 @@ import Bars from './components/bars/bars';
 
 function App() {
   const [test,setTest] = useState([80,70,60,50,40,20,30,100]);
-  const [activeIndex,setActiveIndex] = useState(0);
+  const [activeIndex,setActiveIndex] = useState([]);
+  const [sortedIndex,setSortedIndex] = useState(test.length);
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
@@ -13,7 +14,8 @@ function App() {
     let arr = test;
     for(let i=0;i<arr.length;i++){
       for(let j=0;j<arr.length-1-i;j++){
-        setActiveIndex(j);
+        setActiveIndex([j,j+1]);
+
          if(arr[j]>arr[j+1]){
             let temp = arr[j];
             arr[j] = arr[j+1];
@@ -21,14 +23,18 @@ function App() {
 
          }
          await sleep(1000);
+
          setTest([...arr]);
       }
+      setSortedIndex(test.length-1-i);
     }
 
   }
+  //sorted = index till which it is sorted
+  // active = the ones we are comparing
   return (
     <div>
-      <Bars barArray={test} activeIndex={activeIndex}/>
+      <Bars barArray={test} activeIndex={activeIndex} sortedIndex={sortedIndex}/>
       <button onClick={bubbleSort}>onClick</button>
     </div>
 
