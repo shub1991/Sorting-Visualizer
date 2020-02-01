@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const El = styled.div`background-color:blue;
+const El = styled.div`background-color:#FEDC33;
 width:25px;
 height:${props=>props.height}px;`
 const bar = ({height = 0,active,sorted}) => 
