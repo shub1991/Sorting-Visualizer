@@ -30,7 +30,7 @@ const BubbleSort = () => {
     }
 
     return (
-        <div>
+        <div style={{paddingTop:"150px"}}>
           <Bars barArray={test} activeIndex={activeIndex} sortedIndex={sortedIndex}/>
           <button onClick={bubbleSort}>onClick</button>
         </div>
