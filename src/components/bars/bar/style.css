@@ -1,0 +1,11 @@
+.some {
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  
+
+  /* Standard syntax */
+@keyframes example {
+    0%   {left:0px;}
+    100% {left:100px;}
+  }
